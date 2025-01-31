@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    <bean name="french" class="de.telran.springbeanexample.beans.Language">-->
+<!--        <property name="name" value="French"/>-->
+<!--        <property name="code" value="FR"/>-->
+<!--    </bean>-->
+
+<!--    <bean name="german" class="de.telran.springbeanexample.beans.Language">-->
+<!--        <property name="name" value="German"/>-->
+<!--        <property name="code" value="GE"/>-->
+<!--    </bean>-->
+
+<!--    <bean name="logger" class="de.telran.springbeanexample.beans.Logger">-->
+<!--        <property name="language" ref="french"/>-->
+<!--    </bean>-->
+</beans>
