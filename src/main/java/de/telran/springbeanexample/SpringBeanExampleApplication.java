@@ -12,11 +12,14 @@ public class SpringBeanExampleApplication {
 //        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 //        ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(AppContext.class);
         ConfigurableApplicationContext context = SpringApplication.run(AppContext.class, args);
+        Language language = (Language)context.getBean("language"); // bean
+        System.out.println(language);
+
+        Language german = (Language)context.getBean("german"); // bean
+        System.out.println(german);
+
         Language french = (Language)context.getBean("french"); // bean
         System.out.println(french);
-
-//        Language german = (Language)context.getBean("german"); // bean
-//        System.out.println(german);
 
         Logger logger = (Logger) context.getBean("logger"); // bean
         logger.logMessage("some message");
@@ -27,7 +30,7 @@ public class SpringBeanExampleApplication {
 //        System.out.println(french == logger2Language);
 
         context.close();
-        context.getBean("german"); // exception
+//        context.getBean("german"); // exception
     }
 
 }

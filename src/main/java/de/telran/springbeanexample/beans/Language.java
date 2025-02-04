@@ -1,12 +1,16 @@
 package de.telran.springbeanexample.beans;
 
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-@Component("french")
+@Component
 public class Language {
 
-    private String name = "French";
-    private String code = "FR";
+//    @Value("${language.name}")
+    private String name;
+//    @Value("${language.code}")
+    private String code;
 
     public Language(String name, String code) {
         this.name = name;

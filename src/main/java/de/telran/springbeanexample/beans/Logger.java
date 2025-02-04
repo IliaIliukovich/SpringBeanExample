@@ -1,12 +1,14 @@
 package de.telran.springbeanexample.beans;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Logger {
 
     @Autowired
+    @Qualifier("french")
     private Language language;
 
     public Logger() {
