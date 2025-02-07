@@ -1,5 +1,6 @@
 package de.telran.springbeanexample;
 
+import de.telran.springbeanexample.beans.B;
 import de.telran.springbeanexample.beans.Language;
 import de.telran.springbeanexample.beans.Logger;
 import org.springframework.boot.SpringApplication;
@@ -28,6 +29,12 @@ public class SpringBeanExampleApplication {
 //        Language logger2Language = logger2.getLanguage(); // POJO
 
 //        System.out.println(french == logger2Language);
+
+        System.out.println(context.getBean("a"));
+        B b1 = (B) context.getBean("b");
+        System.out.println(b1);
+        B b2 = (B) context.getBean("b"); // prototype: new bean created, singleton: one bean in system
+        System.out.println(b1 == b2);
 
         context.close();
 //        context.getBean("german"); // exception
